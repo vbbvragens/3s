@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thema 3 - Vragens</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/png" href="https://cdn2.iconfinder.com/data/icons/internet-security-vol-1-filled/32/left-indent_indent_align_alignment-512.png"/>
+</head>
+<body>
+
+<button class="toggle-button" id="toggleButton">Dark Mode</button>
+
+<h1>Thema 3 - Vragens</h1>
+
+<div class="section" id="vragen">
+    <!-- Vragen hier -->
+    <div class="question">
+        <h3>1. Wat is het hoofddoel van een commercieel bedrijf zoals Philips?</h3>
+        <button class="button" onclick="checkAnswer(1, 'A', this)">A) Het dienen van het algemene belang</button>
+        <button class="button" onclick="checkAnswer(1, 'B', this)">B) Winst maken</button>
+        <button class="button" onclick="checkAnswer(1, 'C', this)">C) Het verbeteren van de werkomgeving</button>
+        <button class="button" onclick="checkAnswer(1, 'D', this)">D) Het beschermen van het milieu</button>
+        <div id="result1" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>2. Wat is een nevendoelstelling van een organisatie?</h3>
+        <button class="button" onclick="checkAnswer(2, 'A', this)">A) Het hoofddoel van de organisatie</button>
+        <button class="button" onclick="checkAnswer(2, 'B', this)">B) Een ondersteunend doel dat helpt het hoofddoel te bereiken</button>
+        <button class="button" onclick="checkAnswer(2, 'C', this)">C) Het verbeteren van de maatschappelijke positie</button>
+        <button class="button" onclick="checkAnswer(2, 'D', this)">D) Het verminderen van de kosten</button>
+        <div id="result2" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>3. Wat is het doel van beveiliging?</h3>
+        <button class="button" onclick="checkAnswer(3, 'A', this)">A) Het verbeteren van de productiviteit</button>
+        <button class="button" onclick="checkAnswer(3, 'B', this)">B) Het beschermen van een omgeving, object of persoon tegen schadelijke invloeden</button>
+        <button class="button" onclick="checkAnswer(3, 'C', this)">C) Het verhogen van de winst</button>
+        <button class="button" onclick="checkAnswer(3, 'D', this)">D) Het verbeteren van het imago van de organisatie</button>
+        <div id="result3" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>4. Wat is het verschil tussen ‘beveiliging’ en ‘veiligheid’?</h3>
+        <button class="button" onclick="checkAnswer(4, 'A', this)">A) Beveiliging richt zich op mensen, veiligheid op objecten</button>
+        <button class="button" onclick="checkAnswer(4, 'B', this)">B) Beveiliging richt zich op objecten en informatie, veiligheid op mensen</button>
+        <button class="button" onclick="checkAnswer(4, 'C', this)">C) Er is geen verschil tussen beveiliging en veiligheid</button>
+        <button class="button" onclick="checkAnswer(4, 'D', this)">D) Veiligheid richt zich op winst, beveiliging op risico’s</button>
+        <div id="result4" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>5. Wat is een voorbeeld van een open object?</h3>
+        <button class="button" onclick="checkAnswer(5, 'A', this)">A) Een gevangenis</button>
+        <button class="button" onclick="checkAnswer(5, 'B', this)">B) Een productiebedrijf</button>
+        <button class="button" onclick="checkAnswer(5, 'C', this)">C) Een winkelcentrum</button>
+        <button class="button" onclick="checkAnswer(5, 'D', this)">D) Een school</button>
+        <div id="result5" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>6. Wat is een voorbeeld van een halfbesloten object?</h3>
+        <button class="button" onclick="checkAnswer(6, 'A', this)">A) Een park</button>
+        <button class="button" onclick="checkAnswer(6, 'B', this)">B) Een bioscoop</button>
+        <button class="button" onclick="checkAnswer(6, 'C', this)">C) Een kantoorgebouw</button>
+        <button class="button" onclick="checkAnswer(6, 'D', this)">D) Een elektriciteitscentrale</button>
+        <div id="result6" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>7. Wat is een voorbeeld van een besloten object?</h3>
+        <button class="button" onclick="checkAnswer(7, 'A', this)">A) Een museum</button>
+        <button class="button" onclick="checkAnswer(7, 'B', this)">B) Een casino</button>
+        <button class="button" onclick="checkAnswer(7, 'C', this)">C) Een school</button>
+        <button class="button" onclick="checkAnswer(7, 'D', this)">D) Een taxfree winkel op een vliegveld</button>
+        <div id="result7" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>8. Wat is een natuurlijk risico?</h3>
+        <button class="button" onclick="checkAnswer(8, 'A', this)">A) Diefstal door eigen personeel</button>
+        <button class="button" onclick="checkAnswer(8, 'B', this)">B) Stormschade</button>
+        <button class="button" onclick="checkAnswer(8, 'C', this)">C) Kortsluiting in de meterkast</button>
+        <button class="button" onclick="checkAnswer(8, 'D', this)">D) Sabotage</button>
+        <div id="result8" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>9. Wat is een technisch risico?</h3>
+        <button class="button" onclick="checkAnswer(9, 'A', this)">A) Een aardbeving</button>
+        <button class="button" onclick="checkAnswer(9, 'B', this)">B) Uitval van een machine</button>
+        <button class="button" onclick="checkAnswer(9, 'C', this)">C) Diefstal bij inbraak</button>
+        <button class="button" onclick="checkAnswer(9, 'D', this)">D) Werkonderbreking</button>
+        <div id="result9" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>10. Wat is een menselijk risico?</h3>
+        <button class="button" onclick="checkAnswer(10, 'A', this)">A) Blikseminslag</button>
+        <button class="button" onclick="checkAnswer(10, 'B', this)">B) Overstroming</button>
+        <button class="button" onclick="checkAnswer(10, 'C', this)">C) Vandalisme</button>
+        <button class="button" onclick="checkAnswer(10, 'D', this)">D) Uitval van elektriciteit</button>
+        <div id="result10" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>11. Wat is een voorbeeld van een organisatorische beveiligingsmaatregel?</h3>
+        <button class="button" onclick="checkAnswer(11, 'A', this)">A) Een hek om het bedrijfsgebouw</button>
+        <button class="button" onclick="checkAnswer(11, 'B', this)">B) Een brand- en sluitronde</button>
+        <button class="button" onclick="checkAnswer(11, 'C', this)">C) Een beveiligingscamera</button>
+        <button class="button" onclick="checkAnswer(11, 'D', this)">D) Een bewakingshond</button>
+        <div id="result11" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>12. Wat is een voorbeeld van een bouwkundige beveiligingsmaatregel?</h3>
+        <button class="button" onclick="checkAnswer(12, 'A', this)">A) Een bhv-training</button>
+        <button class="button" onclick="checkAnswer(12, 'B', this)">B) Een schuifpoort</button>
+        <button class="button" onclick="checkAnswer(12, 'C', this)">C) Een bewegingsmelder</button>
+        <button class="button" onclick="checkAnswer(12, 'D', this)">D) Een toegangscontrolesysteem</button>
+        <div id="result12" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>13. Wat is een voorbeeld van een elektronische beveiligingsmaatregel?</h3>
+        <button class="button" onclick="checkAnswer(13, 'A', this)">A) Een brandwerende deur</button>
+        <button class="button" onclick="checkAnswer(13, 'B', this)">B) Een veiligheidsglas</button>
+        <button class="button" onclick="checkAnswer(13, 'C', this)">C) Een beveiligingscamera</button>
+        <button class="button" onclick="checkAnswer(13, 'D', this)">D) Een sleutelbeheersysteem</button>
+        <div id="result13" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>14. Wat is het primaire proces van een bierbrouwerij?</h3>
+        <button class="button" onclick="checkAnswer(14, 'A', this)">A) Het verkopen van bier</button>
+        <button class="button" onclick="checkAnswer(14, 'B', this)">B) Het beschermen van bedrijfseigendommen</button>
+        <button class="button" onclick="checkAnswer(14, 'C', this)">C) Het trainen van personeel</button>
+        <button class="button" onclick="checkAnswer(14, 'D', this)">D) Het verbeteren van het imago</button>
+        <div id="result14" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>15. Wat is het doel van compartimentering?</h3>
+        <button class="button" onclick="checkAnswer(15, 'A', this)">A) Het verbeteren van de productiviteit</button>
+        <button class="button" onclick="checkAnswer(15, 'B', this)">B) Het voorkomen van de snelle uitbreiding van brand</button>
+        <button class="button" onclick="checkAnswer(15, 'C', this)">C) Het verminderen van de kosten</button>
+        <button class="button" onclick="checkAnswer(15, 'D', this)">D) Het verbeteren van de werkomgeving</button>
+        <div id="result15" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>16. Wat is een voorbeeld van manbeveiliging?</h3>
+        <button class="button" onclick="checkAnswer(16, 'A', this)">A) Een bewakingshond</button>
+        <button class="button" onclick="checkAnswer(16, 'B', this)">B) Een beveiligingscamera</button>
+        <button class="button" onclick="checkAnswer(16, 'C', this)">C) Een surveillant</button>
+        <button class="button" onclick="checkAnswer(16, 'D', this)">D) Een hek om het gebouw</button>
+        <div id="result16" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>17. Wat is een voorbeeld van animale beveiliging?</h3>
+        <button class="button" onclick="checkAnswer(17, 'A', this)">A) Een bewakingshond</button>
+        <button class="button" onclick="checkAnswer(17, 'B', this)">B) Een beveiligingscamera</button>
+        <button class="button" onclick="checkAnswer(17, 'C', this)">C) Een surveillant</button>
+        <button class="button" onclick="checkAnswer(17, 'D', this)">D) Een hek om het gebouw</button>
+        <div id="result17" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>18. Wat is een arbeidsconflict?</h3>
+        <button class="button" onclick="checkAnswer(18, 'A', this)">A) Een conflict tussen werknemers en werkgevers over arbeidsvoorwaarden</button>
+        <button class="button" onclick="checkAnswer(18, 'B', this)">B) Een conflict tussen twee bedrijven</button>
+        <button class="button" onclick="checkAnswer(18, 'C', this)">C) Een conflict tussen werknemers onderling</button>
+        <button class="button" onclick="checkAnswer(18, 'D', this)">D) Een conflict tussen werknemers en klanten</button>
+        <div id="result18" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>19. Wat is een stiptheidsactie?</h3>
+        <button class="button" onclick="checkAnswer(19, 'A', this)">A) Een actie waarbij personeel het werk neerlegt</button>
+        <button class="button" onclick="checkAnswer(19, 'B', this)">B) Een actie waarbij personeel precies volgens de regels werkt</button>
+        <button class="button" onclick="checkAnswer(19, 'C', this)">C) Een actie waarbij personeel het bedrijf bezet</button>
+        <button class="button" onclick="checkAnswer(19, 'D', this)">D) Een actie waarbij personeel sabotage pleegt</button>
+        <div id="result19" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>20. Wat is sabotage?</h3>
+        <button class="button" onclick="checkAnswer(20, 'A', this)">A) Het verstoren van de normale gang van zaken uit frustratie of idealisme</button>
+        <button class="button" onclick="checkAnswer(20, 'B', this)">B) Het neerleggen van werk uit protest</button>
+        <button class="button" onclick="checkAnswer(20, 'C', this)">C) Het precies volgens de regels werken</button>
+        <button class="button" onclick="checkAnswer(20, 'D', this)">D) Het bezetten van een bedrijf</button>
+        <div id="result20" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>21. Wat is een bommelding?</h3>
+        <button class="button" onclick="checkAnswer(21, 'A', this)">A) Een melding dat er een explosief is geplaatst</button>
+        <button class="button" onclick="checkAnswer(21, 'B', this)">B) Een melding dat er een brand is uitgebroken</button>
+        <button class="button" onclick="checkAnswer(21, 'C', this)">C) Een melding dat er een diefstal heeft plaatsgevonden</button>
+        <button class="button" onclick="checkAnswer(21, 'D', this)">D) Een melding dat er een staking plaatsvindt</button>
+        <div id="result21" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>22. Wat is een drone?</h3>
+        <button class="button" onclick="checkAnswer(22, 'A', this)">A) Een onbemand luchtvaartuig</button>
+        <button class="button" onclick="checkAnswer(22, 'B', this)">B) Een bewakingshond</button>
+        <button class="button" onclick="checkAnswer(22, 'C', this)">C) Een beveiligingscamera</button>
+        <button class="button" onclick="checkAnswer(22, 'D', this)">D) Een surveillant</button>
+        <div id="result22" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>23. Wat is een risicoanalyse?</h3>
+        <button class="button" onclick="checkAnswer(23, 'A', this)">A) Een onderzoek naar mogelijke risico’s en hun gevolgen</button>
+        <button class="button" onclick="checkAnswer(23, 'B', this)">B) Een plan om risico’s te voorkomen</button>
+        <button class="button" onclick="checkAnswer(23, 'C', this)">C) Een lijst van alle beveiligingsmaatregelen</button>
+        <button class="button" onclick="checkAnswer(23, 'D', this)">D) Een evaluatie van de werkomgeving</button>
+        <div id="result23" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>24. Wat is een schadecategorie 1?</h3>
+        <button class="button" onclick="checkAnswer(24, 'A', this)">A) Een ruimte van vitaal belang voor de onderneming</button>
+        <button class="button" onclick="checkAnswer(24, 'B', this)">B) Een ruimte van zeer groot belang voor de onderneming</button>
+        <button class="button" onclick="checkAnswer(24, 'C', this)">C) Een ruimte van belang voor de onderneming</button>
+        <button class="button" onclick="checkAnswer(24, 'D', this)">D) Een ruimte zonder belang voor de onderneming</button>
+        <div id="result24" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>25. Wat is een voorwaarde voor een goed beveiligingsplan?</h3>
+        <button class="button" onclick="checkAnswer(25, 'A', this)">A) Het moet goedkoop zijn</button>
+        <button class="button" onclick="checkAnswer(25, 'B', this)">B) De maatregelen moeten geschikt zijn om het doel te bereiken</button>
+        <button class="button" onclick="checkAnswer(25, 'C', this)">C) Het moet alleen door de directie worden gedragen</button>
+        <button class="button" onclick="checkAnswer(25, 'D', this)">D) Het moet alleen elektronische maatregelen bevatten</button>
+        <div id="result25" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>26. Wat is een escalatiemodel?</h3>
+        <button class="button" onclick="checkAnswer(26, 'A', this)">A) Een model waarin wordt vastgelegd hoe beveiligingsmaatregelen worden opgeschaald bij een calamiteit</button>
+        <button class="button" onclick="checkAnswer(26, 'B', this)">B) Een model voor het verbeteren van de productiviteit</button>
+        <button class="button" onclick="checkAnswer(26, 'C', this)">C) Een model voor het verminderen van de kosten</button>
+        <button class="button" onclick="checkAnswer(26, 'D', this)">D) Een model voor het verbeteren van het imago</button>
+        <div id="result26" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>27. Wat is een voorbeeld van een natuurlijk risico?</h3>
+        <button class="button" onclick="checkAnswer(27, 'A', this)">A) Diefstal</button>
+        <button class="button" onclick="checkAnswer(27, 'B', this)">B) Brand</button>
+        <button class="button" onclick="checkAnswer(27, 'C', this)">C) Storm</button>
+        <button class="button" onclick="checkAnswer(27, 'D', this)">D) Sabotage</button>
+        <div id="result27" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>28. Wat is een voorbeeld van een technisch risico?</h3>
+        <button class="button" onclick="checkAnswer(28, 'A', this)">A) Overstroming</button>
+        <button class="button" onclick="checkAnswer(28, 'B', this)">B) Uitval van een machine</button>
+        <button class="button" onclick="checkAnswer(28, 'C', this)">C) Werkonderbreking</button>
+        <button class="button" onclick="checkAnswer(28, 'D', this)">D) Vandalisme</button>
+        <div id="result28" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>29. Wat is een voorbeeld van een menselijk risico?</h3>
+        <button class="button" onclick="checkAnswer(29, 'A', this)">A) Blikseminslag</button>
+        <button class="button" onclick="checkAnswer(29, 'B', this)">B) Kortsluiting</button>
+        <button class="button" onclick="checkAnswer(29, 'C', this)">C) Diefstal</button>
+        <button class="button" onclick="checkAnswer(29, 'D', this)">D) Uitval van elektriciteit</button>
+        <div id="result29" class="result"></div>
+    </div>
+
+    <div class="question">
+        <h3>30. Wat is een voorbeeld van een organisatorische maatregel?</h3>
+        <button class="button" onclick="checkAnswer(30, 'A', this)">A) Een hek om het gebouw</button>
+        <button class="button" onclick="checkAnswer(30, 'B', this)">B) Een bhv-training</button>
+        <button class="button" onclick="checkAnswer(30, 'C', this)">C) Een beveiligingscamera</button>
+        <button class="button" onclick="checkAnswer(30, 'D', this)">D) Een bewakingshond</button>
+        <div id="result30" class="result"></div>
+    </div>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+    <div class="btn">
+        <a href="https://vbbvragens.github.io/startpagina/">Terug naar Startpagina</a>
+    </div>
+</div>
+
+<button class="toggle-sidebar" id="toggleSidebar">Vragenlijst</button>
+<div class="sidebar" id="sidebar">
+    <h3 style="text-align: center;">Vragenlijst</h3>
+    <div class="number-container" id="numberContainer"></div>
+    <button id="showAllQuestions" class="show-all-button">Toon Alle Vragen</button>
+</div>
+
+<div class="score" id="score"></div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('#vragenlijst').addEventListener('click', () => {
+            console.log('Vragenlijst tuşuna tıklanmış');
+            showAllQuestions();
+        });
+    });
+
+    function showAllQuestions() {
+        const questions = document.querySelectorAll('.question');
+        questions.forEach(question => {
+            question.style.display = 'block'; // Tüm soruları göster
+        });
+    }
+</script>
+</body>
+</html>
